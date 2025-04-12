@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit; /* 상속(물려받은위에서) a태그는 기본 파란색이나  nav 검은색 */
+}
+nav {
+  border-bottom: 1px solid #ccc;
+}
+
+nav div.inner-box {
+  display: flex;
+  padding: 20px 40px;
+  width: min(1100px, 80%); /* 1100px 도는 80% 중 작은 것을 선택해라*/
+  margin: 0 auto;
+  justify-content: space-between; /* 양쪽정렬*/
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+nav ul a {
+  color: rgb(223, 223, 223); /* 선택 안된 페이지는 밝은 회색*/
+}
+nav ul a:hover {
+  /* 마우스를 올렸을때 조금 밝은 검정*/
+  color: rgb(13, 13, 20);
+  font-weight: bold;
+}
+nav ul a.selected {
+  color: rgb(13, 13, 20); /* 선택 안된 페이지는 밝은 회색*/
+  font-weight: bold;
+}
+nav .logo {
+  font-size: 1.75rem; /* rem : root(html) 루트의 글자크기 폰트는 주로 rem 많이 사용(모바일 대응) */
+  font-weight: 700;
+}
+
+@media (max-width: 750px) {
+  /* 데스크톱 화면에서 750으로 줄어들면 적용할 style*/
+
+  nav div.inner-box {
+    padding: 20px 0;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  nav ul {
+    gap: 20px;
+  }
+}

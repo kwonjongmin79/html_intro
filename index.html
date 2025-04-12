@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Nanum Gothic", sans-serif;
+      }
+      .home-content {
+        text-align: justify; /*양쪽 간격을 조정 장문을 사용하는경우 justify 사용*/
+        margin-top: 40px; /*위에서 간격을 줌*/
+        display: flex; /*가로로 정렬 */
+        flex-direction: column; /* 가로 정렬 무효화*/
+        justify-content: flex-start; /* direction 방향으로 정렬 */
+        align-items: center; /*direction 과 반대축 정렬*/
+      }
+      .home-content h2 {
+        max-width: min(1100px, 70%); /* 최소 크기를 선택 해라 */
+        margin-bottom: 10px; /* 제목고 글 간격 조정 */
+      }
+      .home-content p {
+        max-width: min(1100px, 70%);
+      }
+      a.btn-login {
+        display: inline-block; /* inline 속성에 상하여백을 적용하고 싶을 때 */
+        background: linear-gradient(68deg, #fbd3e9, #cfbbd2);
+        padding: 10px 30px;
+        border-radius: 1000px;
+        margin-top: 20px;
+        color: rgb(29, 26, 26);
+        transition: background 0.6s ease-in-out, color 0.3s ease;
+      }
+
+      a.btn-login:hover {
+        background: linear-gradient(
+          68deg,
+          #fbc2eb,
+          #a6eea6
+        ); /* 마우스를 올렸을 때 다른 그라디언트 색상 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 네비게이션 바 -->
+    <nav>
+      <div class="inner-box">
+        <div class="logo">
+          <a href="index.html">My Home</a>
+        </div>
+
+        <ul>
+          <li><a href="index.html" class="selected">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 홈페이지 글이랑 버튼 -->
+    <div class="home-content">
+      <h2>메밀꽃 필 무렵</h2>
+      <p>
+        장돌뱅이인 허 생원은 우연히 만난 젊은 장돌뱅이 동이와 대화 장터로 가는
+        길에 밤길을 동행하게 되고, 달빛 아래 메밀꽃 밭에서 자신이 젊었을 때
+        물레방앗간에서 있었던 성 서방네 처녀와의 이야기를 회상한다. 동이도
+        자신의 과거 이야기를 들려주며 생부가 누구인지 알고 싶다고 하는데,
+        이야기에 서로 비슷한 점이 많았던데다 결정적으로 동이가 왼손에 채찍을
+        들고 있는 것을 보고 동이가 자신의 아들이라고 확신하면서 동이와 함께
+        동이의 어머니가 있다는 제천장으로 간다.
+      </p>
+      <a href="login.html" class="btn-login">로그인</a>
+    </div>
+  </body>
+</html>
