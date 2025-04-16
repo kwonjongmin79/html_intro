@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        .login-container {
+            display: flex; /*가로로 정렬 */
+            flex-direction: column; /* 가로 정렬 무효화*/
+            justify-content: center; /* direction 방향으로 정렬 */
+            align-items: center; /*direction 과 반대축 정렬*/
+            margin-top: 40px; /*위에서 간격을 줌*/            
+        }
+        .login-container h2 {
+            font-size: 1.75rem; /* 제목 크기 */
+            margin-bottom: 10px; /* 제목과 입력창 간격 */
+        }
+        input{
+            display: block; /* 블록(block) 요소로 설정하면 한줄을 차지함 */
+            margin: 10px auto; /* 위 아래 간격 */ 
+            border: none; /* 테두리 없음 */
+            font-size: 1.25rem; /* 글자 크기 */
+            box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 계산 */
+        }
+        input[type="text"], input[type="password"] {
+            background: rgb(255, 238, 205);
+            border-radius: 1000px; /* 모서리 둥글게 */
+            width: 300px; /* 너비 */
+            padding: 10px 20px; /* 위 아래, 좌우 간격 */
+            box-shadow: 0 0 2px inset rgba(0, 0, 0, 0.5)   /* inset 내부 그림자 효과 */
 
-    <style></style>
-  </head>
-  <body>
-    <!-- 네비게이션 바 -->
-    <nav>
-      <div class="inner-box">
-        <div class="logo">
-          <a href="index.html">My Home</a>
-        </div>
-
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="login.html" class="selected">Login</a></li>
-        </ul>
-      </div>
-    </nav>
-  </body>
+        }
+        input[type="submit"] {
+            width: 180px; /* 너비 */
+            border-radius: 10000px; /* 모서리 둥글게 */
+            padding: 4px 12px; /* 위 아래, 좌우 간격 */
+            color:white; /* 글자 색상 */
+            background: rgb(167, 175, 245); /* 배경 색상 */
+            cursor: pointer; /* 마우스 커서 모양을 손가락으로 변경경 */
+            box-shadow: 0 0 2px inset rgba(0, 0, 0, 0.5); /* inset 내부 그림자 효과 */
+        }   
+        input[type="submit"]:hover {
+            background: rgb(125, 136, 255); /* 배경 색상 */
+            color: rgb(255, 255, 255); /* 글자 색상 */
+        }
+    </style>
+</head>
+<body>
+        <!-- 네비게이션 바 -->
+        <nav>
+            <div class="inner-box">
+              <div class="logo">
+                <a href="index.html">My Home</a>
+              </div>
+      
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="login.html" class="selected">Login</a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- 로그인페이지 -> 페이지제목, 아이디입력, 비밀번호, 로그인버튼  -->
+          <div class="login-container">
+            <h2>Login</h2>
+            <!-- 사용자 입력을 위해선 form + input 태그 사용 -->
+             <!-- type 은 해당 내용 / placeholder는 힌트, required는 반드시 해당 입력이 필요하다는 속성 -->
+             <form>
+                <input type="text" placeholder="아이디를 입력하세요." required /> 
+                <input type="password" placeholder="비밀번호를 입력하세요." required />
+                <input type="submit" value="로그인" />
+             </form>
+          </div>
+</body>
 </html>
